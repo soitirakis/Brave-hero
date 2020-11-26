@@ -15,7 +15,7 @@ class Erou{
   public $today_lucky;
 
   function __construct( $viata, $array_of_powers){
-  //  $this->nume = $nume;
+    $this->nume = $nume;
     $this->viata = $viata;
     $this->putere = $array_of_powers[0]; //set the power according to the range
     $this->aparare = $array_of_powers[1]; //set the power according to the range
@@ -33,7 +33,7 @@ class Erou{
   }
 
   function detalii(){
-  //  echo "<strong>SuperErou: </strong> {$this->nume}"."</br>";
+    echo "<strong>{$this->nume} </strong> "."</br>";
     echo "<strong>Viata:</strong> {$this->viata}"."</br>";
     echo "Putere: {$this->putere}"."</br>";
     echo "Aparare: {$this->aparare}"."</br>";
@@ -54,8 +54,8 @@ class SuperErou extends Erou{
   public $use_dragon;
   public $use_shield;
 
-  function __construct( $viata, $array_of_powers, $super_powers){
-    parent::__construct( $viata, $array_of_powers);
+  function __construct( $nume, $viata, $array_of_powers, $super_powers){
+    parent::__construct($nume, $viata, $array_of_powers);
     $this->forta_dragonului_usage = $super_powers[0];
     $this->scutul_fermecat_usage = $super_powers[1];
     $this->forta_dragonului_luck = $super_powers[2];
@@ -91,8 +91,8 @@ class SuperErou extends Erou{
   }
 }
 
-$Carl = new SuperErou( $Carl_life, $Carl_powers, $Carl_super_powers);
-$Villain = new Erou($Villain_life, $Villain_powers);
+$Carl = new SuperErou($Carl_name, $Carl_life, $Carl_powers, $Carl_super_powers);
+$Villain = new Erou($Villain_name, $Villain_life, $Villain_powers);
 //$Carl->detalii();
 //$Villain->detalii();
 //echo $Carl->resetPowers($Carl_powers);
@@ -231,8 +231,8 @@ function lupta($erou, $badass, $array_erou, $array_badass, $array_superpowers){
       $erou_life = $erou->viata;
       $badass_life = $badass->viata - $damage;
 
-      $erou = new SuperErou($erou_life, $erou_powers, $erou_super_powers);
-      $badass = new Erou($badass_life, $badass_powers);
+      $erou = new SuperErou($erou->nume, $erou_life, $erou_powers, $erou_super_powers);
+      $badass = new Erou($badass->nume, $badass_life, $badass_powers);
       $tura++;
     }elseif ($erou->viteza < $badass->viteza) {
       echo "Cel rau ataca! </br>";
@@ -254,8 +254,8 @@ function lupta($erou, $badass, $array_erou, $array_badass, $array_superpowers){
       }
       $erou_life = $erou->viata - $damage;
       $badass_life = $badass->viata;
-      $erou = new SuperErou($erou_life, $erou_powers, $erou_super_powers);
-      $badass = new Erou($badass_life, $badass_powers);
+      $erou = new SuperErou($erou->nume, $erou_life, $erou_powers, $erou_super_powers);
+      $badass = new Erou($badss->nume, $badass_life, $badass_powers);
       $tura++;
     }else {
       echo "UUU. Viteze egale! Sa vedem cine e mai bun!</br>";
@@ -282,8 +282,8 @@ function lupta($erou, $badass, $array_erou, $array_badass, $array_superpowers){
         //update life level
         $erou_life = $erou->viata;
         $badass_life = $badass->viata - $damage;
-        $erou = new SuperErou($erou_life, $erou_powers, $erou_super_powers);
-        $badass = new Erou($badass_life, $badass_powers);
+        $erou = new SuperErou($erou->nume, $erou_life, $erou_powers, $erou_super_powers);
+        $badass = new Erou($badass->nume, $badass_life, $badass_powers);
         $tura++;
       }else{
         echo "Cel rau ataca! </br>";
@@ -307,8 +307,8 @@ function lupta($erou, $badass, $array_erou, $array_badass, $array_superpowers){
         }
         $erou_life = $erou->viata - $damage;
         $badass_life = $badass->viata;
-        $erou = new SuperErou($erou_life, $erou_powers, $erou_super_powers);
-        $badass = new Erou($badass_life, $badass_powers);
+        $erou = new SuperErou($erou->nume, $erou_life, $erou_powers, $erou_super_powers);
+        $badass = new Erou($badass->nume, $badass_life, $badass_powers);
         $tura++;
       }
     }
