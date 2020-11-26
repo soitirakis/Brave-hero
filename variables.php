@@ -9,7 +9,8 @@ $Carl_luck = [10,30];
 $Carl_luck_range = rand(0,100);
 
 $Carl_powers = [$Carl_power, $Carl_defence, $Carl_speed, $Carl_luck, $Carl_luck_range];
-$Carl_power_array = [60,70,40,50,40,50,10,30];
+//array of random values to use 
+$Carl_power_array = ['power_min' => 60, 'power_max' => 70, 'defence_min' => 40, 'defence_max' => 50, 'speed_min' => 40,'speed_max' => 50,'luck_min' => 10, 'luck_max' => 30]; 
 
 //Carl extra powers
 $Carl_forta_dragonului = rand(0,100);
@@ -28,7 +29,8 @@ $Villain_luck = [25,40];
 $Villain_luck_range = rand(0,100);
 
 $Villain_powers = [$Villain_power, $Villain_defence, $Villain_speed, $Villain_luck, $Villain_luck_range];
-$Villain_power_array = [50,80,35,55,40,60,25,40];
+//array of random values to use 
+$Villain_power_array = ['power_min' => 50,'power_max' => 80,'defence_min' => 35, 'defence_max' => 55, 'speed_min' => 40,'speed_max' => 60,'luck_min' => 25,'luck_max' => 40]; 
 
 
 ?>
