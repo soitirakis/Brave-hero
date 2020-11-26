@@ -341,16 +341,5 @@ function checkDamage($damage){
   //echo "result:".$result;
   return $result;
 }
-/*
-function checkLife($erou_life, $badass_life){
-  if($erou_life <= 0){
-    echo "Game over! Oponentul a castigat!";
-    break;
-  }
-  if($badass_life <= 0){
-    echo "Game over! Ai castigat!";
-    break;
-  }
-}*/
 
 ?>
