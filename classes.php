@@ -189,9 +189,7 @@ function lupta($erou, $badass, $array_erou, $array_badass, $array_superpowers){
     $$z = $v;
     $k++;
   }
-  //$erou_powers = [$erou->putere, $erou->aparare, $erou->viteza, $erou->noroc_range_min, $erou->noroc_range_max, $erou->noroc_range];
-  //$erou_super_powers = [$erou->forta_dragonului_usage, $erou->scutul_fermecat_usage, $erou->forta_dragonului_luck, $erou->scutul_fermecat_luck];
-  //$badass_powers = [$badass->putere, $badass->aparare, $badass->viteza, $badass->noroc_range_min, $badass->noroc_range_max, $badass->noroc_range];
+  
   $tura = 1;
   //check for someone to be alive and round not 20
   while($erou->viata > 0 && $badass->viata > 0 && $tura <= 20) {
