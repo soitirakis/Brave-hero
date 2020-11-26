@@ -1,7 +1,7 @@
 <?php
 //the easy way
 include('variables.php');
-include("lupta.php");
+//include("lupta.php");
 //include("clase2.php");
 
 class Erou{
