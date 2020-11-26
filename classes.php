@@ -93,79 +93,7 @@ class SuperErou extends Erou{
 
 $Carl = new SuperErou($Carl_name, $Carl_life, $Carl_powers, $Carl_super_powers);
 $Villain = new Erou($Villain_name, $Villain_life, $Villain_powers);
-//$Carl->detalii();
-//$Villain->detalii();
-//echo $Carl->resetPowers($Carl_powers);
-//echo $Carl->viteza;
-//echo $Carl->forta_dragonului_usage;
-//echo $Carl->forta_dragonului_luck;
-//echo $Carl->checkTodaysLuck();
-//echo $Carl->checkForDragon();
 
-/*
-for($tura = 1; $tura <= 20; $tura++){
-  if($Carl->viata > 0 && $Villain->viata > 0){
-    echo "Tura este ".$tura;
-    if($Carl->viteza == $Villain->viteza) {
-      if($Carl->noroc > $Villain->noroc){
-        $damage = $Carl->putere * $Carl->noroc - $Villain->aparare * $Villain->noroc;
-        $Villain->viata -= $damage;
-        echo "Viteza egale ataca Carl: {$Villain->viata}"."</br>";
-        $Carl = new Erou($Carl->viata, rand(60,70), rand(40,50), rand(40,50), rand(10,30));
-        $Villain = new Erou($Villain->viata, rand(50,80), rand(35,55), rand(40,60), rand(25,40));
-      } else {
-        $damage = $Villain->putere - $Carl->aparare;
-        $Carl->viata -= $damage;
-        echo "Ataca villain {$Carl->viata}"."</br>";
-        $Carl = new Erou($Carl->viata, rand(60,70), rand(40,50), rand(40,50), rand(10,30));
-        $Villain = new Erou($Villain->viata, rand(50,80), rand(35,55), rand(40,60), rand(25,40));
-      }
-    } else if ($Carl->viteza > $Villain->viteza) {
-      $damage = $Carl->putere - $Villain->aparare;
-      $Villain->viata -= $damage;
-      echo "Ataca carl viteze inegale: {$Villain->viata}"."</br>";
-      $Carl = new Erou($Carl->viata, rand(60,70), rand(40,50), rand(40,50), rand(10,30));
-      $Villain = new Erou($Villain->viata, rand(50,80), rand(35,55), rand(40,60), rand(25,40));
-    } else {
-      $damage = $Villain->putere - $Carl->aparare;
-      $Carl->viata -= $damage;
-      echo "Ataca villain: {$Carl->viata}"."</br>";
-      $Carl = new Erou($Carl->viata, rand(60,70), rand(40,50), rand(40,50), rand(10,30));
-      $Villain = new Erou($Villain->viata, rand(50,80), rand(35,55), rand(40,60), rand(25,40));
-    }
-  }
-}*/
-/*
-while($Carl->viata > 0 && $Villain->viata > 0) {
-  if($Carl->viteza == $Villain->viteza) {
-    if($Carl->noroc > $Villain->noroc){
-      $damage = $Carl->putere * $Carl->noroc - $Villain->aparare * $Villain->noroc;
-      $Villain->viata -= $damage;
-      echo "Viteza egale ataca Carl: {$Villain->viata}"."</br>";
-      $Carl = new Erou($Carl->viata, rand(60,70), rand(40,50), rand(40,50), rand(10,30));
-      $Villain = new Erou($Villain->viata, rand(50,80), rand(35,55), rand(40,60), rand(25,40));
-    } else {
-      $damage = $Villain->putere - $Carl->aparare;
-      $Carl->viata -= $damage;
-      echo "Ataca villain {$Carl->viata}"."</br>";
-      $Carl = new Erou($Carl->viata, rand(60,70), rand(40,50), rand(40,50), rand(10,30));
-      $Villain = new Erou($Villain->viata, rand(50,80), rand(35,55), rand(40,60), rand(25,40));
-    }
-  } else if ($Carl->viteza > $Villain->viteza) {
-    $damage = $Carl->putere - $Villain->aparare;
-    $Villain->viata -= $damage;
-    echo "Ataca carl viteze inegale: {$Villain->viata}"."</br>";
-    $Carl = new Erou($Carl->viata, rand(60,70), rand(40,50), rand(40,50), rand(10,30));
-    $Villain = new Erou($Villain->viata, rand(50,80), rand(35,55), rand(40,60), rand(25,40));
-  } else {
-    $damage = $Villain->putere - $Carl->aparare;
-    $Carl->viata -= $damage;
-    echo "Ataca villain: {$Carl->viata}"."</br>";
-    $Carl = new Erou($Carl->viata, rand(60,70), rand(40,50), rand(40,50), rand(10,30));
-    $Villain = new Erou($Villain->viata, rand(50,80), rand(35,55), rand(40,60), rand(25,40));
-  }
-}
-*/
 
 function lupta($erou, $badass, $array_erou, $array_badass, $array_superpowers){
   //generate the values for the erou rand() powers
