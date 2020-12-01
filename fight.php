@@ -43,7 +43,7 @@ function fight($erou, $badass){
    </div>
      <?php
   }
-  if($tura == 20){
+  if($tura === 20){
     echo "<h5 class='col-12 text-center p-2'><strong>Game over! Limita de {$tura} de runde a fost atinsa!</strong></h5>";
   }
   if($erou_powers["viata"] <= 0 ){
@@ -86,7 +86,10 @@ function HeroAttack($erou, $badass){
   $erou->setViata($erou_life);
   $badass->setViata($badass_life);
   $erou->resetPowers();
+  $erou->resetSuperPowers();
   $badass->resetPowers();
+  $badass_new_life = $badass->getPowers();
+  echo "Villain's new life: ".$badass_new_life["viata"];
 }
 
 function VillainAttack($erou, $badass){
@@ -118,7 +121,10 @@ function VillainAttack($erou, $badass){
   $erou->setViata($erou_life);
   $badass->setViata($badass_life);
   $erou->resetPowers();
+  $erou->resetSuperPowers();
   $badass->resetPowers();
+  $erou_new_life = $erou->getPowers();
+  echo $erou_new_life["nume"]." new life: ".$erou_new_life["viata"];
 }
 
 function checkDamage($damage){
