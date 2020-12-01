@@ -28,10 +28,9 @@ function fight($erou, $badass){
     }else {
       echo "UUU. Viteze egale! Sa vedem cine e mai bun!</br>";
       //check the level of luck
-      if($erou_powers[0] > $badass_powers[0]){
+      if($erou_powers["daily_noroc"] > $badass_powers["daily_noroc"]){
         echo "Buna treaba! Azi esti mai norocos, ataci primul</br>";
         HeroAttack($erou, $badass);
-        //
       }else{
         echo "Cel rau ataca! </br>";
         VillainAttack($erou, $badass);
