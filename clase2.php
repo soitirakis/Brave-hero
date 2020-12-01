@@ -2,6 +2,7 @@
 include("variables2.php");
 
 class Hero{
+  //class to create hero
   protected $viata;
   protected $nume;
   protected $putere;
@@ -13,6 +14,7 @@ class Hero{
   protected $x;
 
   function __construct($viata, $array_of_powers){
+    //extract values from the array of powers 
     $i = 1;
     foreach($array_of_powers as $value){
       $x = 'value'.$i;
@@ -53,6 +55,7 @@ class Hero{
 }
 
 class SuperHero extends Hero {
+  //class to create super hero
   protected $forta_dragonului_usage;
   protected $scutul_fermecat_usage;
   protected $forta_dragonului_luck;
@@ -77,7 +80,7 @@ class SuperHero extends Hero {
       $this->use_shield = false;
 
   }
-  //check probaility to use forta dragonului 10%
+  //check probaility to use "forta dragonului" 10%
   function checkForDragon(){
     if($this->forta_dragonului_usage < $this->forta_dragonului_luck){
       $this->use_dragon = true;
@@ -90,7 +93,7 @@ class SuperHero extends Hero {
     return $this->putere *= 2;
   }
 
-  //check to use scutul fermecat 20%
+  //check to use "scutul fermecat" 20%
   function checkForShield(){
     if($this->scutul_fermecat_usage < $this->scutul_fermecat_luck){
       $this->use_shield = true;
