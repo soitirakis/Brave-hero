@@ -24,12 +24,12 @@ class Hero{
       $this->putere = rand($this->value2,$this->value3);
       $this->aparare = rand($this->value4,$this->value5);
       $this->viteza = rand($this->value6,$this->value7);
-    //  $this->noroc = rand($this->value8,$this->value9);
+      $this->noroc = rand($this->value8,$this->value9);
       $this->noroc_range = rand(0,100);
   }
 
   function getPowers(){
-    return ["nume" => $this->nume, "viata" => $this->viata, "putere" => $this->putere, "aparare" => $this->aparare, "viteza" => $this->viteza, "noroc" => $this->noroc, $this->noroc_range];
+    return ["nume" => $this->nume, "viata" => $this->viata, "putere" => $this->putere, "aparare" => $this->aparare, "viteza" => $this->viteza, "noroc" => $this->noroc, "daily_noroc" => $this->noroc_range];
   }
 
   function setViata($noua_viata){
