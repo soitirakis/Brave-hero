@@ -2,8 +2,9 @@
 //Carl
 $Carl_life = rand(65,95);
 
+//array of random values to use
 $Carl_power_array = ["nume" => "Carl", "putere_min" => 60, "putere_max" => 70, "aparare_min" => 40, "aparare_max" => 50,
-"viteza_min" => 40, "viteza_max" => 50, "noroc_min" => 10, "noroc_max" => 30]; //array of random values to use
+"viteza_min" => 40, "viteza_max" => 50, "noroc_min" => 10, "noroc_max" => 30]; 
 
 //Carl extra powers
 $Carl_forta_dragonului_luck = 10; //set the probaility to use this power 10%
