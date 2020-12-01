@@ -16,8 +16,6 @@ class Hero{
     $i = 1;
     foreach($array_of_powers as $value){
       $x = 'value'.$i;
-    //  global $$x;
-      //global $x;
       $this->{$x} = $value;
       $i++;
     }
@@ -39,7 +37,6 @@ class Hero{
   }
 
   function resetPowers(){
-    //$this->__construct();
     $this->putere = rand($this->value2,$this->value3);
     $this->aparare = rand($this->value4,$this->value5);
     $this->viteza = rand($this->value6,$this->value7);
