@@ -8,8 +8,8 @@ class Hero{
   protected $putere;
   protected $aparare;
   protected $viteza;
-  protected $noroc;
-  protected $noroc_range;
+  protected $noroc;  //according to the problem requests Carl = 10% - 30%
+  protected $noroc_range; //daily luck 0% - 100% 
   protected $today_lucky;
   protected $x;
 
@@ -44,7 +44,6 @@ class Hero{
     $this->viteza = rand($this->value6,$this->value7);
     $this->noroc = rand($this->value8,$this->value9);
     $this->noroc_range = rand(0,100);
-  //  return ;
   }
   function checkTodaysLuck(){
     if(in_array($this->noroc_range, range($this->value8, $this->value9)) ){
@@ -72,10 +71,10 @@ class SuperHero extends Hero {
         $i++;
       }
 
-      $this->forta_dragonului_usage = rand(0,100);
-      $this->scutul_fermecat_usage = rand(0,100);
-      $this->forta_dragonului_luck = $value1;
-      $this->scutul_fermecat_luck = $value2;
+      $this->forta_dragonului_usage = rand(0,100); //daily probability to use "forta dragonului"
+      $this->scutul_fermecat_usage = rand(0,100); //daily probability to use "scutul fermecat"
+      $this->forta_dragonului_luck = $value1; //probability to use "forta dragonului" 10%
+      $this->scutul_fermecat_luck = $value2; //probability to use "scutul fermecat" 20%
       $this->use_dragon = false;
       $this->use_shield = false;
 
@@ -89,6 +88,7 @@ class SuperHero extends Hero {
   }
 
   //use forta dragonului
+  //double the power of the attacker
   function forta_dragonului(){
     return $this->putere *= 2;
   }
@@ -102,6 +102,7 @@ class SuperHero extends Hero {
   }
 
   //use scutul fermecat
+  //reduce the power of the adversary by half
   function scutul_fermecat($adversary_power){
     return $adversary_power / 2;
   }
