@@ -24,7 +24,7 @@
       <h4 class="col-12 h4 text-center p-2">Let's fight</h4>
 
       <?php
-        include("classes.php");
+        include("fight.php");
       ?>
 
     </div>
